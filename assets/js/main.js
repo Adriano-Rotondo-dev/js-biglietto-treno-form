@@ -54,13 +54,39 @@ console.log(formEl, inputNameEl, inputAgeEl, inputDistanceEl);
 
 //* seleziono gli elementi da inserire nella card
 
-const cardHeaderEl = document.querySelector(".card-header");
-const offerEL = document.querySelector(".ticketType");
-const offerCodeEL = document.querySelector(".ticketCode");
+const passengerNameEl = document.querySelector(".full-name");
+const offerEl = document.querySelector(".ticketType");
+const offerCodeEl = document.querySelector(".ticketCode");
 const ticketImg = document.querySelector("img");
 
 //* implemento elementListener per il form
 
 formEl.addEventListener("submit", (e) => {
-  e.preventDefault;
+  e.preventDefault();
+  const nameValue = nameFieldEl.value;
+  const distanceValue = kmFieldEl.value;
+  const ageValue = ageFieldEl.value;
+  console.log(nameValue, distanceValue, ageValue);
+  //* aggiorno la DOM card
+  //* aggiorno il passengerName con il value inserito
+  passengerNameEl.innerHTML = nameValue;
+  //* credo due let per inserire tipo di biglietto e codice biglietto relativi all'ageValue
+  let offer;
+  let offerCode;
+  if (ageValue < 18) {
+    offer= "Minorenne";
+    offerCode = "UA" + distanceValue;
+  } else if (ageValue > 65) {
+    offer= "Over 65";
+    offerCode = "OSF" + distanceValue;
+  } else {
+    offer= "Intero";
+    offerCode = "I" + distanceValue;
+  }
+  //* mostro in pagina nei div .ticketType e .ticketCode
+  offerEl.innerHTML = offer
+  offerCodeEl.innerHTML = offerCode
+  //* aggiorno il div .price per mostrare in pagina il costo del biglietto
+
 });
+
