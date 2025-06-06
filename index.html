@@ -12,10 +12,13 @@
     />
     <title>JS train ticket form</title>
   </head>
-  <body>
-    <div class="row" >
+  <body class="bg-danger-subtle">
+    <h1 id="ticketCalculator" class="text-center bg-danger-subtle">
+      Calcola il tuo Biglietto
+    </h1>
+    <div class="row">
       <div class="col-6 bg-danger p-3">
-        <form>
+        <form class="shadow p-3 mb-5 bg-body rounded m-5">
           <div class="mb-3">
             <label for="full-name" class="form-label">Nome e Cognome</label>
             <input
@@ -42,15 +45,19 @@
               required
             />
           </div>
-          <button id="submit" type="submit">Invia</button>
-          <button id="cancel" type="button">Cancella</button>
+          <button id="submit" type="submit" class="btn btn-success">
+            Invia
+          </button>
+          <button id="cancel" type="button" class="btn btn-warning">
+            Cancella
+          </button>
         </form>
       </div>
-      <div class="col-6 bg-danger-subtle p-5">
-        <div class="card">
-          <div class="card-header">
-            <h3>DETTAGLIO PASSEGGERO</h3>
-            <h4><span class="full-name"></span></h4>
+      <div class="col-6 bg-danger p-3">
+        <div class="card shadow p-3 mb-5 mt-5 bg-body rounded">
+          <div class="card-header bg-danger-subtle">
+            <h3 class="text-center">DETTAGLIO PASSEGGERO</h3>
+            <h4 class="full-name text-center"></h4>
           </div>
           <div class="card-body">
             <h5>Tipo di Offerta</h5>
@@ -59,7 +66,7 @@
             <div class="ticketCode"></div>
             <div class="price"></div>
             <h5>Prezzo Finale del Biglietto</h5>
-            <img src="" alt="" />
+            <img src="" alt="" style="max-width: 50%" />
             <h5 class="thank-you"></h5>
           </div>
         </div>

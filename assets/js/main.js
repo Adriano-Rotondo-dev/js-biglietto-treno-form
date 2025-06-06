@@ -90,6 +90,8 @@ formEl.addEventListener("submit", (e) => {
   offerCodeEl.innerHTML = offerCode;
   //* aggiorno il div .price per mostrare in pagina il costo del biglietto
   ticketPriceEl.innerHTML = "€" + finalPrice.toFixed(2);
+  //* aggiorno l'img
+  ticketImgEl.src = "./assets/img/train.png";
   //* aggiorno il messaggio di ringraziamento
   thankYouEl.innerHTML = "Grazie e Buon Viaggio";
 });
