@@ -57,7 +57,9 @@ console.log(formEl, inputNameEl, inputAgeEl, inputDistanceEl);
 const passengerNameEl = document.querySelector(".full-name");
 const offerEl = document.querySelector(".ticketType");
 const offerCodeEl = document.querySelector(".ticketCode");
-const ticketImg = document.querySelector("img");
+const ticketImgEl = document.querySelector("img");
+const ticketPriceEl = document.querySelector(".price");
+const thankYouEl = document.querySelector(".thank-you");
 
 //* implemento elementListener per il form
 
@@ -74,19 +76,20 @@ formEl.addEventListener("submit", (e) => {
   let offer;
   let offerCode;
   if (ageValue < 18) {
-    offer= "Minorenne";
+    offer = "Minorenne";
     offerCode = "UA" + distanceValue;
   } else if (ageValue > 65) {
-    offer= "Over 65";
+    offer = "Over 65";
     offerCode = "OSF" + distanceValue;
   } else {
-    offer= "Intero";
+    offer = "Intero";
     offerCode = "I" + distanceValue;
   }
   //* mostro in pagina nei div .ticketType e .ticketCode
-  offerEl.innerHTML = offer
-  offerCodeEl.innerHTML = offerCode
+  offerEl.innerHTML = offer;
+  offerCodeEl.innerHTML = offerCode;
   //* aggiorno il div .price per mostrare in pagina il costo del biglietto
-
+  ticketPriceEl.innerHTML = "€" + finalPrice.toFixed(2);
+  //* aggiorno il messaggio di ringraziamento
+  thankYouEl.innerHTML = "Grazie e Buon Viaggio";
 });
-
