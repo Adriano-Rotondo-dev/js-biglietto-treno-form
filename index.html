@@ -13,13 +13,51 @@
     <title>JS train ticket form</title>
   </head>
   <body>
-    <form>
-      <input id="name" type="text" placeholder="Nome&Cognome">
-      <input id="kms" type="number" placeholder="Inserisci quanti km vuoi percorrere" />
-      <input id="age" type="number" placeholder="Inserisci l'età del passeggero" />
-      <button id="submit" type="button">Invia</button>
-      <button id="cancel" type="button">Cancella</button>
-    </form>
+    <div class="row">
+      <div class="col-6">
+        <form>
+          <div class="mb-3">
+            <label for="full-name" class="form-label">Nome e Cognome</label>
+            <input
+              id="full-name"
+              class="form-control"
+              type="text"
+              name="Nome e Cognome"
+              placeholder="Nome&Cognome"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="kms" class="form-label">Chilometri</label>
+            <input id="kms" class="form-control" type="number" name=distanza"
+            placeholder="Inserisci quanti km vuoi percorrere" />
+          </div>
+          <div class="mb-3">
+            <label for="age" class="form-label">Età Passeggero</label>
+            <input
+              id="age"
+              class="form-control"
+              type="number"
+              placeholder="Inserisci l'età del passeggero"
+            />
+          </div>
+          <button id="submit" type="button">Invia</button>
+          <button id="cancel" type="button">Cancella</button>
+        </form>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>DETTAGLIO PASSEGGERO</h3>
+            <h4><span class="name"></span></h4>
+          </div>
+          <div class="card-body">
+            <div class="ticketType"></div>
+            <div class="ticketCode"></div>
+            <img src="" alt="trainTicket" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/js/main.js"></script>
   </body>

@@ -10,7 +10,7 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 - va applicato uno sconto del 40% per gli over 65.
 */
 //* salvo in una costante il DOM node dell'input name
-const nameFieldEl = document.getElementById("name");
+const nameFieldEl = document.getElementById("full-name");
 //* salvo in una costante il DOM node dell'input kms
 const kmFieldEl = document.getElementById("kms");
 //* salvo in una costante il DOM node dell'input age
@@ -41,6 +41,22 @@ submitButtonEl.addEventListener("click", () => {
   //*stampo in console il prezzo finale, mostrando fino a 2 decimali
   console.log(finalPrice.toFixed(2));
 });
-
 //* inizializzo l'eventListener del bottone cancel per ricaricare la pagina
 cancelButtonEl.addEventListener("click", () => location.reload());
+
+//* seleziono gli elementi interni al form e li salvo in DOM nodes
+const formEl = document.querySelector("form")
+const inputNameEl = document.getElementById("full-name")
+const inputAgeEl = document.getElementById("age")
+const inputDistanceEl = document.getElementById("kms")
+//*stampo in console 
+console.log(formEl, inputNameEl, inputAgeEl, inputDistanceEl)
+
+//* seleziono gli elementi da inserire nella card
+
+const cardHeaderEl = document.querySelector(".card-header")
+const offerEL = document.querySelector(".ticketType")
+const offerCodeEL = document.querySelector(".ticketCode")
+const ticketImg = document.querySelector("img")
+
+
