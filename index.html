@@ -24,12 +24,13 @@
               type="text"
               name="Nome e Cognome"
               placeholder="Nome&Cognome"
+              required
             />
           </div>
           <div class="mb-3">
             <label for="kms" class="form-label">Chilometri</label>
             <input id="kms" class="form-control" type="number" name=distanza"
-            placeholder="Inserisci quanti km vuoi percorrere" />
+            placeholder="Inserisci quanti km vuoi percorrere" required />
           </div>
           <div class="mb-3">
             <label for="age" class="form-label">Età Passeggero</label>
@@ -38,9 +39,10 @@
               class="form-control"
               type="number"
               placeholder="Inserisci l'età del passeggero"
+              required
             />
           </div>
-          <button id="submit" type="button">Invia</button>
+          <button id="submit" type="button" value="submit">Invia</button>
           <button id="cancel" type="button">Cancella</button>
         </form>
       </div>
@@ -58,7 +60,6 @@
         </div>
       </div>
     </div>
-
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

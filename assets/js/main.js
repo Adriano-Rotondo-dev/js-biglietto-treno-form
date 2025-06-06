@@ -45,18 +45,22 @@ submitButtonEl.addEventListener("click", () => {
 cancelButtonEl.addEventListener("click", () => location.reload());
 
 //* seleziono gli elementi interni al form e li salvo in DOM nodes
-const formEl = document.querySelector("form")
-const inputNameEl = document.getElementById("full-name")
-const inputAgeEl = document.getElementById("age")
-const inputDistanceEl = document.getElementById("kms")
-//*stampo in console 
-console.log(formEl, inputNameEl, inputAgeEl, inputDistanceEl)
+const formEl = document.querySelector("form");
+const inputNameEl = document.getElementById("full-name");
+const inputAgeEl = document.getElementById("age");
+const inputDistanceEl = document.getElementById("kms");
+//*stampo in console
+console.log(formEl, inputNameEl, inputAgeEl, inputDistanceEl);
 
 //* seleziono gli elementi da inserire nella card
 
-const cardHeaderEl = document.querySelector(".card-header")
-const offerEL = document.querySelector(".ticketType")
-const offerCodeEL = document.querySelector(".ticketCode")
-const ticketImg = document.querySelector("img")
+const cardHeaderEl = document.querySelector(".card-header");
+const offerEL = document.querySelector(".ticketType");
+const offerCodeEL = document.querySelector(".ticketCode");
+const ticketImg = document.querySelector("img");
 
+//* implemento elementListener per il form
 
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault;
+});
