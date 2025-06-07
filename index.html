@@ -10,14 +10,17 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>JS train ticket form</title>
   </head>
   <body class="bg-danger-subtle">
-    <h1 id="ticketCalculator" class="text-center bg-danger-subtle text-muted">
-      Calcola il tuo Biglietto
-    </h1>
-    <div class="row">
-      <div class="col-6 bg-danger p-3">
+    <header class="container">
+      <h1 id="ticketCalculator" class="text-center bg-danger-subtle text-light text-outline">
+        Calcola il tuo Biglietto
+      </h1> 
+    </header>
+    <div class="row ">
+      <div class="col-6 col-md-6 col-sm-12 bg-danger p-3">
         <form class="shadow p-3 mb-5 bg-body rounded m-5">
           <div class="mb-3">
             <label for="full-name" class="form-label">Nome e Cognome</label>
@@ -53,10 +56,10 @@
           </button>
         </form>
       </div>
-      <div class="col-6 bg-danger p-3">
-        <div class="card shadow p-3 mb-5 mt-5 bg-body rounded">
+      <div class="col-6 col-md-6 col-sm-12 bg-danger p-3">
+        <div class="card shadow p-3 mb-5 mt-5 bg-body rounded m-5">
           <div class="card-header bg-danger-subtle">
-            <h3 class="text-center">DETTAGLIO PASSEGGERO</h3>
+            <h3 class="text-center text-light text-outline">DETTAGLIO PASSEGGERO</h3>
             <h4 class="full-name text-center"></h4>
           </div>
           <div class="card-body">
@@ -66,7 +69,7 @@
             <div class="ticketCode"></div>
             <div class="price"></div>
             <h5>Prezzo Finale del Biglietto</h5>
-            <img src="" alt="" style="max-width: 50%" />
+            <img src="" alt="" style="max-width: 25%" class="d-block mx-auto"/>
             <h5 class="thank-you"></h5>
           </div>
         </div>
