@@ -20,27 +20,11 @@ const submitButtonEl = document.getElementById("submit");
 //* salvo in una costante il DOM node del button per ricaricare la pagina
 const cancelButtonEl = document.getElementById("cancel");
 //* inizializzo l'eventListener del bottone submit per stampare in console i valori inseriti dall'utente
-submitButtonEl.addEventListener("click", () => {
-  const userName = nameFieldEl.value;
-  const travelDistance = Number(kmFieldEl.value);
-  const userAge = Number(ageFieldEl.value);
-  const pricePerKm = 0.21;
-  console.log(userName);
-  console.log(travelDistance);
-  console.log(userAge);
-  //*salvo in una variabile il prezzo del biglietto
-  let ticketPrice = travelDistance * pricePerKm;
-  //*stabilisco le condizioni di scontistica del biglietto in base ad ageFieldEl.value
-  if (userAge < 18) {
-    finalPrice = ticketPrice * 0.8;
-  } else if (userAge > 65) {
-    finalPrice = ticketPrice * 0.6;
-  } else if (userAge > 18 && userAge < 65) {
-    finalPrice = ticketPrice;
-  }
-  //*stampo in console il prezzo finale, mostrando fino a 2 decimali
-  console.log(finalPrice.toFixed(2));
-});
+ let offer;
+  let offerCode;
+let pricePerKm = 0.21 
+
+
 //* inizializzo l'eventListener del bottone cancel per ricaricare la pagina
 cancelButtonEl.addEventListener("click", () => location.reload());
 
@@ -73,18 +57,22 @@ formEl.addEventListener("submit", (e) => {
   //* aggiorno il passengerName con il value inserito
   passengerNameEl.innerHTML = nameValue;
   //* credo due let per inserire tipo di biglietto e codice biglietto relativi all'ageValue
-  let offer;
-  let offerCode;
+ 
+  let ticketPrice = distanceValue * pricePerKm;
   if (ageValue < 18) {
     offer = "Minorenne";
+    finalPrice = ticketPrice * 0.8
     offerCode = "UA" + distanceValue;
   } else if (ageValue > 65) {
     offer = "Over 65";
+    finalPrice = ticketPrice * 0.6;
     offerCode = "OSF" + distanceValue;
   } else {
     offer = "Intero";
+    finalPrice = ticketPrice
     offerCode = "I" + distanceValue;
   }
+  console.log(finalPrice.toFixed(2));
   //* mostro in pagina nei div .ticketType e .ticketCode
   offerEl.innerHTML = offer;
   offerCodeEl.innerHTML = offerCode;
