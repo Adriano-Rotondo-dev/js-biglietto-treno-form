@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>JS train ticket form</title>
   </head>
-  <body class="bg-danger-subtle">
-    <header class="container">
+  <body class="container bg-danger-subtle">
+    <header>
       <h1 id="ticketCalculator" class="text-center bg-danger-subtle text-light text-outline">
         Calcola il tuo Biglietto
       </h1> 
     </header>
-    <div class="row ">
-      <div class="col-6 col-md-6 col-sm-12 bg-danger p-3">
+    <div class="row bg-danger rounded">
+      <div class="col-6 col-md-6 col-sm-12 p-3">
         <form class="shadow p-3 mb-5 bg-body rounded m-5">
           <div class="mb-3">
             <label for="full-name" class="form-label">Nome e Cognome</label>
@@ -35,7 +35,7 @@
           </div>
           <div class="mb-3">
             <label for="kms" class="form-label">Chilometri</label>
-            <input id="kms" class="form-control" type="number" name=distanza"
+            <input id="kms" class="form-control" type="number" name="distanza"
             placeholder="Inserisci quanti km vuoi percorrere" required />
           </div>
           <div class="mb-3">
@@ -56,7 +56,7 @@
           </button>
         </form>
       </div>
-      <div class="col-6 col-md-6 col-sm-12 bg-danger p-3">
+      <div class="col-6 col-md-6 col-sm-12 p-3">
         <div class="card shadow p-3 mb-5 mt-5 bg-body rounded m-5">
           <div class="card-header bg-danger-subtle">
             <h3 class="text-center text-light text-outline">DETTAGLIO PASSEGGERO</h3>
